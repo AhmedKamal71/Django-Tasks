@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Details</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>ID:</strong> {{ details.id }}</li>
+                            <li class="list-group-item"><strong>Title:</strong> {{ details.title }}</li>
+                            <li class="list-group-item"><strong>Author:</strong> {{ details.author }}</li>
+                            <li class="list-group-item"><strong>Price:</strong> {{ details.price }}</li>
+                            <li class="list-group-item"><strong>Description:</strong> {{ details.description }}</li>
+                            <li class="list-group-item"><strong>Rating:</strong> {{ details.rating }}</li>
+                        </ul>
+                        <div class="text-center mt-3">
+                            <a class="btn btn-warning" href="{%url 'BookStore:update' details.id %}">Edit</a>
+                            <a class="btn btn-danger" href="{% url 'BookStore:delete' details.id %}">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

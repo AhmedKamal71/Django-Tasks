@@ -1,0 +1,27 @@
+<header>
+  <div class="container w-100">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="{% url 'BookStore:index' %}"><img class="img" src="https://cdn-icons-png.freepik.com/256/3330/3330314.png?ga=GA1.1.1956503610.1710011925&semt=ais_hybrid" alt=""></a>
+            <a class="nav-link active" aria-current="page" href="{% url 'BookStore:index' %}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'BookStore:add' %}">Add</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </header>
+
+  <style>
+    .img{
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+
+  
