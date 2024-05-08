@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "BookStore",
+    "Book"
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'Lab1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'BaseTemplete'), os.path.join(BASE_DIR,'BookStore/Templetes')],
+        'DIRS': [os.path.join(BASE_DIR,'BaseTemplete'), os.path.join(BASE_DIR,'BookStore/Templetes'), os.path.join(BASE_DIR,'Book/Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,8 +78,13 @@ WSGI_APPLICATION = 'Lab1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306'
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

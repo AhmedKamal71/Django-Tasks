@@ -17,9 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-app_name = "BookStore" # Alias Name For URL
+# app_name = "BookStore" # Alias Name For URL
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('BookStore.urls')),
     path('book/', include('BookStore.urls')),
+    path('books/', include('Book.urls')),
+    
 ]

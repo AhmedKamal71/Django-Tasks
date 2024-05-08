@@ -1,0 +1,27 @@
+{% extends 'book/main.html' %}
+
+
+{% block content %}
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Details</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>ID:</strong> {{ book.id }}</li>
+                            <li class="list-group-item"><strong>Title:</strong> {{ book.title }}</li>
+                            <li class="list-group-item"><strong>Description:</strong> {{ book.description }}</li>
+                            <li class="list-group-item"><strong>Price:</strong> {{ book.views }}</li>
+                            <li class="list-group-item"><strong>Rating:</strong> {{ book.rate }}</li>
+                        </ul>
+                        <div class="text-center mt-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
