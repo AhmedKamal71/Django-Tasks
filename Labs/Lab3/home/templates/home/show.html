@@ -1,0 +1,54 @@
+{% extends 'main/base_layout.html' %}
+
+{% block main-content %}
+<div class="container mx-auto flex flex-col justify-center items-center min-h-screen py-10">
+  <h2 class="text-center font-semibold text-3xl mb-8 text-indigo-600">Book Details: {{ book.title }}</h2>
+  <div class="w-full md:w-3/4 lg:w-1/2 bg-white rounded-lg shadow-md p-8">
+    <h5 class="text-xl font-bold mb-4 text-indigo-600">Book Information</h5>
+    <ul class="space-y-4">
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">Title:</span>
+        <span class="text-gray-800">{{ book.title }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">ID:</span>
+        <span class="text-gray-800">{{ book.id }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">Author:</span>
+        <span class="text-gray-800">{{ book.author_name }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">Description:</span>
+        <span class="text-gray-800">{{ book.description }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">Type:</span>
+        <span class="text-gray-800">{{ book.type }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">Rate:</span>
+        <span class="text-gray-800">{{ book.rate }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">Views:</span>
+        <span class="text-gray-800">{{ book.views }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">User:</span>
+        <span class="text-gray-800">{{ book.user }}</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">ISBN:</span>
+        <span class="text-gray-800">{{ book.isbn }}</span>
+      </li>
+      {% for category in book.category.all %}
+      <li class="flex justify-between">
+        <span class="text-lg font-semibold text-indigo-500">Category:</span>
+        <span class="text-gray-800">{{ category.name }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
